@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Gift Search</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+          
+        <img
+          src="https://giftsear.ch/images/giftsearch-logo.svg"
+          alt="gift search lgog"
+        />
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LATEST PICKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">GIFTS BY OCCASION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TYPES OF GIFTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT US</a>
+          </li>
+          <li><input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-success" type="submit">Search</button></li>
+        </ul>
+        
+      </div>
+      
+    </nav>
+    
+    <!--who do you want to make happy part-->
+    <h1 class="text-center">
+      <span class="regular">Who do you want to</span><br />
+      <span class="cursive">make happy?</span>
+    </h1>
+    <!--form-->
+    <div class="container" class="mx-auto bg-warning" style="width: 150px">
+      <div class="row">
+        <span>I want to get a gift for</span
+        ><select name="gender">
+          <option value="1">A Male</option>
+          <option value="2">A Female</option>
+          <option value="3">Doesn't matter</option></select
+        ><br /><span>who is my</span
+        ><select name="relationship">
+          <option value="1">Partner</option>
+          <option value="2">Family Member</option>
+          <option value="3">Friend</option>
+          <option value="4">Co-Worker</option>
+          <option value="5">Acquaintance</option>
+        </select>
+      </div>
+      <div class="row">
+        <span>They are</span
+        ><select name="age">
+          <option value="1">A Child</option>
+          <option value="2">A Teenager</option>
+          <option value="3">An Adult</option></select
+        ><br /><span>and my budget is</span
+        ><select name="budget">
+          <option value="1">Under $20</option>
+          <option value="2">Under $50</option>
+          <option value="3">Under $100</option>
+          <option value="0">Infinite</option>
+        </select>
+        <button>What to get?</button>
+      </div>
+    </div>
+
+    <!--cards-->
+    <div class="container">
+      <h1>LATEST PICKS</h1>
+      <div class="row">
+        <div class="col">
+          <div class="image">
+            <a href=""
+              ><img
+                class="img-fluid"
+                src="https://giftsear.ch/image/square/sloth-loves-cat-t-shirt.jpg"
+                alt=""
+            /></a>
+            <a href="#" style="text-align: center">Sloth Loves Cat T-Shirt</a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto molestias porro qui suscipit a velit veniam ex nostrum
+              adipisci. Numquam sed minus, hic iusto magnam dolore quam quas
+              eligendi excepturi!
+            </p>
+            <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/men-s-traveler-dopkit.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Men's Traveler Dopp Kit</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-sm-3">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/narwhal-usb-foot-warmers.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Narwhal USB Foot Warmers</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-sm-3">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/predator-quadcopter-drone.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Predator Quadcopter Drone</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="image">
+            <a href=""
+              ><img
+                class="img-fluid"
+                src="https://giftsear.ch/image/square/smart-led-light-bulb-smartphone-controlled.jpg"
+                alt=""
+            /></a>
+            <a href="#" style="text-align: center">Smart LED Light Bulb - Smartphone Controlled</a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto molestias porro qui suscipit a velit veniam ex nostrum
+              adipisci. Numquam sed minus, hic iusto magnam dolore quam quas
+              eligendi excepturi!
+            </p>
+            <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/cobblestone-pathway-glossy-mural-36x80in.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Cobblestone Pathway Glossy Mural 36x80in</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/star-wars-han-solo-in-carbonite-wall-decal.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Star Wars Han Solo In Carbonite Wall Decal</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/emoji-poop-shaped-pillow.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Emoji Poop Shaped Funny Pillow/Plush</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="image">
+            <a href=""
+              ><img
+                class="img-fluid"
+                src="https://giftsear.ch/image/square/galaxy-case-for-macbook-1.jpg"
+                alt=""
+            /></a>
+            <a href="#" style="text-align: center">Galaxy Case for Apple MacBook Pro</a>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Architecto molestias porro qui suscipit a velit veniam ex nostrum
+              adipisci. Numquam sed minus, hic iusto magnam dolore quam quas
+              eligendi excepturi!
+            </p>
+            <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/boogie-board-8-5-inch-lcd-writing-tablet.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Boogie Board 8.5 Inch LCD Writing Tablet</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/ninjabread-men-cookie-cutters-set-of-3.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Ninjabread Men Cookie Cutters (Set of 3)</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/square/happy-cat-pillowcase-18x18in.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center">Happy, Cute Cat Pillowcase 18x18in</a>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            molestias porro qui suscipit a velit veniam ex nostrum adipisci.
+            Numquam sed minus, hic iusto magnam dolore quam quas eligendi
+            excepturi!
+          </p>
+          <h5>$17.95 <button>CHECK IT OUT</button class="btn btn-secondary"></h5>
+        </div>
+      </div>
+      <a href=""> <h3 class="text-right">SEE LATEST GIFTS</h3> </a>
+      <!--4 icons-->
+      <div class="row">
+        <div class="col-md">
+          <div class="image">
+            <a href=""
+              ><img
+                class="img-fluid"
+                src="data:image/jpeg;base64,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"
+                alt=""
+            /></a>
+            <a href="#" style="text-align: center"><p class="text-center">Geak Gear</p></a>
+            
+
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpV6hNlx2u0if-3FUwWH2g82X1Ksbqvi7ffk1Kh3hCZTr7PNW5sdLDwfn82C3W4spoDBM&usqp=CAU"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center"><p class="text-center">Office Jungle</p></a>
+          
+          
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="data:image/jpeg;base64,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"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center"><p class="text-center">Movies and TV Shows</p></a>
+          
+         
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmomaJDswZnWHLhb3rbOymMhlStbOB8EA-pg&usqp=CAU"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center"><p class="text-center">Cooking Goodies</p></a>
+          
+          
+          
+        </div>
+        <!--articles-->
+      </div>
+      <h3>THE GIFTSEARCH BLOG</h3>
+      <div class="row">
+        <div class="col-md">
+          <div class="image">
+            <a href=""
+              ><img
+                class="img-fluid"
+                src="https://giftsear.ch/image/wide/4306ca5cd480562c6b311523bd63d538.jpg"
+                alt=""
+            /></a>
+            <a href="#" style="text-align: center"><p class="text-center">6 Strange Historical Events that Shaped Christmas</p></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore incidunt sequi modi quae odio, ex a, assumenda autem architecto quod rerum repellendus omnis id perferendis reprehenderit odit tempore. Magnam, odit.</p>
+            <a href="#"><h4 class="text-right">FULL ARTICLE</h4></a>
+
+            <a href="#"></a>
+          </div>
+        </div>
+        <div class="col-md">
+          <a href=""
+            ><img
+              class="img-fluid"
+              src="https://giftsear.ch/image/wide/a9d3b639032310002e641a94c2d50630.jpg"
+              alt=""
+          /></a>
+          <a href="#" style="text-align: center"><p class="text-center">Actually Great, Non-Boring Gifts for Grandparents</p></a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore incidunt sequi modi quae odio, ex a, assumenda autem architecto quod rerum repellendus omnis id perferendis reprehenderit odit tempore. Magnam, odit.</p>
+          <a href="#"><h4 class="text-right">FULL ARTICLE</h4></a>
+          
+    </div>
+    <!--footer-->
+    </div>
+    <p style="margin-bottom:4cm;">  </p>
+  </body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md" >
+        <ul style="list-style-type:none;">
+            <li>GIFTSEAR.CH </li>
+            <li><a href="">About us</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>  
+      </div>
+      <div class="col-md" >
+        <ul style="list-style-type:none;">
+            <li>WHO TO MAKE HAPPY?</li>
+            <li><a href="">Gifts for the boyfriend / husband</a></li>
+            <li><a href="">Gifts for the girlfriend / wife</a></li>
+            <li><a href="">Gifts for mother</a></li>
+            <li><a href="">Gifts for a friend</a></li>
+          </ul>  
+      </div>
+      <div class="col-md" >
+        <ul style="list-style-type:none;">
+            <li>GIFTS BY OCCASION</li>
+            <li><a href="">Birthday</a></li>
+            <li><a href="">Christmas</a></li>
+            <li><a href="">Halloween</a></li>
+            <li><a href="">Just because</a></li>
+          </ul>  
+      </div>
+      <div class="col-md" >
+        <ul style="list-style-type:none;">
+            <li>
+                <div class="row">
+                    <div class="column">
+                      <img src="https://giftsear.ch/images/social/email.svg" alt="socialmedia" style="width:50%">
+                    </div>
+                    <div class="column">
+                      <img src="https://giftsear.ch/images/social/twitter.svg" alt="socialmedia" style="width:50%">
+                    </div>
+                    <div class="column">
+                      <img src="https://giftsear.ch/images/social/pinterest.svg" alt="socialmedia" style="width:50%">
+                    </div>
+                    <div class="column">
+                        <img src="https://giftsear.ch/images/social/facebook.svg" alt="socialmedia" style="width:50%">
+                      </div>
+                      <div class="column">
+                        <img src="https://giftsear.ch/images/social/gplus.svg" alt="socialmedia" style="width:50%">
+                      </div>
+                  </div>
+            </li>
+            <li><a href="">Powered by SigurWeb</a></li>
+            <li>© GiftSearch 2021. All Rights Reserved</li>
+          </ul>  
+      </div>
+    </div>
+  </div>
+  </div>
+</html>
