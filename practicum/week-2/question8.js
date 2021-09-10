@@ -9,14 +9,17 @@ output: [1, 0, 1, 2]
 
 var biggerAndEven = function(input) {
     answer = []
-    var count
+    var count = 0
     for (var i of input) {
-        for (var num of input)  {
-            count = 0
-            if (num % 2 == 0 && num > i) {
-                count++
+        count = 0
+        for (var j of input) {
+            if (j > i) {
+                if (j % 2 == 0) {
+                    count++
+                }
             }
         }
         answer.push(count)
     }
+    
 };
