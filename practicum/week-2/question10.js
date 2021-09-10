@@ -12,13 +12,16 @@ var maxMinusMin = function(n) {
     numbers = []
     for (x=0;x<num.length;x++) {
         var integer = parseInt(x, 10);
-        numbers.push(integer)
+        numbers.push(num[integer])
     }
     var maxNum = 0
+    var minNum = Number.MAX_SAFE_INTEGER
     for (var i of numbers) {
         if (i > maxNum) {
             maxNum = i
+        } else if (i < minNum){
+            minNum = i
         }
     }
-    return maxNum
+    return maxNum - minNum
 };
