@@ -11,8 +11,7 @@ output: 'hello'
 var suffleString = function(input, shuffleIndices) {
     var answer = ""
     for (var x of shuffleIndices) {
-        answer + input[x]
+        answer += input[x]
     }
     return answer
-    //3
 };
