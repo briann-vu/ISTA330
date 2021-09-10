@@ -9,5 +9,13 @@ There are 5 ordered pairs: (4, 6), (4, 9), (2, 6), (2, 9), (6, 9)
 */
 
 var numberOfOrderedPairs = function(input) {
-
+    var count = 0;
+    for (var x = 0; x < input.length; x++) {
+        for (var y of input) {
+            if (input[x] < y) {
+                count++
+            }
+        }
+    }
+    return count
 };
