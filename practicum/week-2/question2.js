@@ -9,17 +9,17 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
          and therfore each of the three kids will get 8 cookies.
  */
 
- var canGetEqualCookies = function(cookies, extraCookies) {
-     var maxCookies = Math.max(cookies);
-     for (var cookie of cookies) {
-        if (cookie < maxCookies) {
-                var temp = maxCookies - cookie
-                cookie += temp
-                extraCookies -= temp
+var canGetEqualCookies = function(cookies, extraCookies) {
+        var maxCookies = Math.max.apply(null, cookies)
+        for (var cookie of cookies) {
+                if (cookie < maxCookies) {
+                        var temp = maxCookies - cookie
+                        cookie += temp
+                        extraCookies -= temp
+                }
         }
-     }
-     if (extraCookies < 0) {
-             return false
-     } 
-     return true
- };
+        if (extraCookies < 0 || extraCookies > 0) {
+                return false
+        } 
+        return true
+}       ;
