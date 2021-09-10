@@ -12,9 +12,9 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 
 var howManyCommon = function(A, B) {
     var count = 0
-    for (var letter in B) {
-        for (var letter2 in A) {
-            if (letter2 == letter) {
+    for (var letter in A) {
+        for (var letter2 in B) {
+            if (B[letter2] == A[letter]) {
                 count++
             }
         }
