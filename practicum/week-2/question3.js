@@ -17,5 +17,5 @@ var numberOfOrderedPairs = function(input) {
             }
         }
     }
-    return count
+    return "hi"
 };
