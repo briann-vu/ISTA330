@@ -21,5 +21,6 @@ var biggerAndEven = function(input) {
         }
         answer.push(count)
     }
+    return answer
     
 };
