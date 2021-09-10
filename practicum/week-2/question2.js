@@ -18,14 +18,14 @@ var canGetEqualCookies = function(cookies, extraCookies) {
                         extraCookies -= temp
                 }
         }
-                if (extraCookies > 0) {
-                        for (var cookie of cookies) {
-                                cookie++
-                                extraCookies--
-                        }
+        if (extraCookies > 0) {
+                for (var cookie of cookies) {
+                        cookie++
+                        extraCookies--
                 }
+        }
         if (extraCookies < 0) {
-        return false
+                return false
         } 
         return true
         };
