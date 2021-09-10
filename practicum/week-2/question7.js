@@ -15,7 +15,7 @@ var maxSumOfMins = function(input) {
        input = input.sort(function(a, b) {
               return a - b;
               });
-       for (x=0;x<input.length;x+=1) {
+       for (x=0;x<input.length;x+=2) {
               answer += Math.min(input[x], input[x+1])
        }
        return answer
