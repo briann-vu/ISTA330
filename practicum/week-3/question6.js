@@ -12,5 +12,20 @@ output: 2
 */
 
 var m_element = function(input) {
+    var nOverTwo = input.length / 2
+    var dict = {}
+    for (var x of input) {
+        if (x in dict) {
+            dict[x]++
+        } else {
+            dict[x] = 1
+        }
+    }
+
+    for (var key of dict) {
+        if (dict[key] > nOverTwo) {
+            return key
+        }
+    } return -1
 
 };
