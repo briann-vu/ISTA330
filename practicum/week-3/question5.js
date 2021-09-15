@@ -17,7 +17,35 @@ output: true
 */
 
 var isMonotonic = function(input) {
+    var array = []
+    for (var i = 0; i <= input.length; i++) {
+        answer.push(input[i] - input[i + 1])
+    }
 
+    if (isIncreasing(array) || isDecreasing(array)) {
+        return true
+    } return false
 };
 
-console.log('hi');
+var isIncreasing = function(array) {
+    for (var x of array) {
+        if (x <= 0) {
+            continue
+        } else {
+            return false
+        }
+    }
+    return true
+}
+
+var isDecreasing = function(array) {
+    for (var x of array) {
+        if (x >= 0) {
+            continue
+        } else {
+            return false
+        }
+    }
+    return true
+}
+
