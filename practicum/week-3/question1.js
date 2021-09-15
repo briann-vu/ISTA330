@@ -9,10 +9,13 @@ is at least twice as much as every other number
          output: true
 */
 
+
 var largestNumberIsAtLeastTwice = function(input) {
    var maxNum = Math.max(input)
+   var maxIndex = input.indexOf(maxNum);
+   input.splice(maxIndex, maxNum);
    for (var x of input) {
-        if (maxNum >= (x * 2)) {
+        if (maxNum >= (x * 2) ) {
                 continue
         } else {
                 return false
