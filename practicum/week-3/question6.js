@@ -22,10 +22,13 @@ var m_element = function(input) {
         }
     }
 
-    for (var key of dict) {
-        if (dict[key] > nOverTwo) {
+    //for (var key of dict) 
+	for (const [key, value] of Object.entries(dict)) {
+        if (value > nOverTwo) {
             return key
         }
     } return -1
 
 };
+
+console.log(m_element([1, 2, 2, 3, 2, 7, 2]))
