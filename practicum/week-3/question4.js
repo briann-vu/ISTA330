@@ -13,5 +13,13 @@ Example:
 */
 
 var hasDuplicates = function(input) {
-
+    var dict = {}
+    for (var x of input) {
+        if (x in dict) {
+            return true
+        } else {
+            dict[x] = 1
+        }
+    }
+    return false
 };
