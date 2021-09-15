@@ -36,7 +36,7 @@ var isIncreasing = function(array) {
         }
     }
     return true
-}
+};
 
 var isDecreasing = function(array) {
     for (var x of array) {
@@ -47,5 +47,5 @@ var isDecreasing = function(array) {
         }
     }
     return true
-}
+};
 
