@@ -10,5 +10,13 @@ is at least twice as much as every other number
 */
 
 var largestNumberIsAtLeastTwice = function(input) {
-   
+   var maxNum = Math.max(input)
+   for (var x of input) {
+        if (maxNum >= (x * 2)) {
+                continue
+        } else {
+                return false
+        }
+   }
+   return true
 };
