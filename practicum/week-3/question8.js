@@ -13,5 +13,22 @@ output: 3
 */
 
 var d_integer = function(input) {
+    var dict = {}
+    for (var x of input) {
+        if (x in dict) {
+            dict[x]++
+        } else {
+            dict[x] = 1
+        }
+    }
 
+	var maxDInt = -1;
+	for (const [key, value] of Object.entries(dict)) {
+        if (key == value && key > maxDInt) {
+			maxDInt = key
+		}
+	}
+	return maxDInt
 };
+
+console.log(d_integer([3,5,3,3,5,1]))
