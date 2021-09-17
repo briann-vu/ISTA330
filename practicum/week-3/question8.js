@@ -26,6 +26,7 @@ var d_integer = function(input) {
 	for (const [key, value] of Object.entries(dict)) {
         if (key == value && key > maxDInt) {
 			maxDInt = key
+            // using key might be poroblem check and refresh for 6
 		}
 	}
 	return maxDInt
