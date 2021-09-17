@@ -20,7 +20,6 @@ var largestSubarray = function(input) {
                 }
         }
         var maxSum = Number.MIN_VALUE
-        var ans = []
         for (var array of allSubArr) {
                 var possMax = 0
                 for (var num of array) {
@@ -28,10 +27,9 @@ var largestSubarray = function(input) {
                 }
                 if (possMax > maxSum) {
                         maxSum = possMax
-                        ans = array
                 }
         }
-        return ans
+        return maxSum
 
 };
 
