@@ -11,7 +11,7 @@ is at least twice as much as every other number
 
 
 var largestNumberIsAtLeastTwice = function(input) {
-   var maxNum = Math.max(input)
+   var maxNum = Math.max(...input)
    var maxIndex = input.indexOf(maxNum);
    input.splice(maxIndex, maxNum);
    for (var x of input) {
