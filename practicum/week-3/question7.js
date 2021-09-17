@@ -21,11 +21,17 @@ var transpose = function(M) {
     for (var i = 0; i <= M.length; i++) {
         var helper = []
         for (var m of M) {
-            helper.push(m[x])
+            if (m[x] != null) {
+                helper.push(m[x])
+            }
         }
         x++
-        ans.push(helper)
+		if (helper.length != 0) {
+			 ans.push(helper)
+		}
     }
 	return ans
     
 };
+
+
