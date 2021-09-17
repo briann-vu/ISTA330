@@ -16,5 +16,41 @@ output: [[-5, -4], [23, 24]]
 */
 
 var minPairs = function(input) {
+    var ans;
+    var min = Number.MAX_VALUE
+    for (var x of input) {
+        for (var y of input) {
+            if (Math.abs(x - y) < min && Math.abs(x - y) != 0) {
+                ans = []
+				var toAdd = [x,y].sort(function(a, b) {
+                return a - b;
+                })
+				ans.push(toAdd)
+                min = Math.abs(x - y)
+            } else if (Math.abs(x - y) == min && Math.abs(x - y) != 0) {
+				var toAdd = [x,y].sort(function(a, b) {
+                return a - b;
+                })
+				ans.push(toAdd)
+            }
+        }
+    }
+	ans = ans.slice(0,(ans.length/2))
+	return ans.sort(helper);
 
 };
+
+function helper(a, b) {
+    if (a[0] === b[0]) {
+        return 0;
+    }
+    else {
+
+        return (a[0] < b[0]) ? -1 : 1
+    }
+}
+
+
+
+
+
