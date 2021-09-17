@@ -25,7 +25,7 @@ var m_element = function(input) {
     //for (var key of dict) 
 	for (const [key, value] of Object.entries(dict)) {
         if (value > nOverTwo) {
-            return key //change
+            return parseInt(key)
         }
     } return -1
 
