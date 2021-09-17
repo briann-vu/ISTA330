@@ -15,8 +15,8 @@ output: 1
 
 var d_count = function(input1, input2, d) {
 	var count = 0
-	for (var x of arr1) {
-		for (var y of arr2) {
+	for (var x of input1) {
+		for (var y of input2) {
 			console.log(x,'-',y,'=',Math.abs(x-y))
 			if (Math.abs(x-y) <= d && Math.abs(x-y) != 0) {
 				count++
