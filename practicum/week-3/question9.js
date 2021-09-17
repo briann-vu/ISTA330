@@ -13,7 +13,55 @@ so there are two groups with the largest size.
 */
 
 var largestGroupsCount = function(n) {
-    for (var x = 0; x <= n; x++) {
-        
+    var dict = {}
+    var helper = []
+    for (var x = 1; x <= n; x++) {
+        dict[x] = []
+        helper.push(x.toString())
     }
+	for (var x of helper) {
+		var total = 0
+		if (x.length > 1) {
+			for (var l = 0; l <= x.length - 1; l++) {
+				total += parseInt(x[l])
+			}
+			for (const [key, value] of Object.entries(dict)) {
+				if (key == total.toString()) {
+					dict[key].push(parseInt(x))
+				}
+			}
+		} else {
+			for (const [key, value] of Object.entries(dict)) {
+				if (key == x.toString()) {
+					dict[key].push(parseInt(x))
+				}
+			}
+		}
+	}
+	var maxLen = Number.MIN_VALUE
+	var count;
+	for (const [key, value] of Object.entries(dict)) {
+		if (dict[key].length > maxLen) {
+			count = 1
+			maxLen = dict[key].length
+		} else if (dict[key].length == maxLen) {
+			count++
+		}
+	}
+	return count
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
