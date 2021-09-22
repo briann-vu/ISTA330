@@ -12,8 +12,24 @@
       containing 4 flowers. For each flower, you should show the image and under
       the image display its name.
     </div>
-    <div id="flowersDiv"></div>
+    <div id="flowersDiv">
+      <table></table>
+    </div>
     <script>
+      var displayFlowers = function (flowers) {
+        var flowersDiv = document.getElementById("flowersDiv");
+        var table = flowersDiv.firstElementChild;
+        console.log("yeet i");
+        var topRow = table.insertRow(0);
+        var botRow = table.insertRow(1);
+        for (var i = 0; i < flowers.length; i++) {
+          if (i < flowers.length / 2) {
+            topRow.innerHTML += `<image src='${flowers[i].picture}'>`;
+          } else {
+            botRow.innerHTML += `<image src='${flowers[i].picture}'>`;
+          }
+        }
+      };
       /*
            Using the array flowers below, 
            display the flowers. Use the div 'flowersDiv'.
@@ -47,6 +63,7 @@
         rose,
         waterlily,
       ];
+      displayFlowers(flowers);
     </script>
   </body>
 </html>
