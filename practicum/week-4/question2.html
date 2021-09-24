@@ -55,17 +55,15 @@
         for (var i = 0; i < flowers.length; i++) {
           if (i < flowers.length / 2) {
             topRow.innerHTML += `<td>
-                                    <figure>
-                                        <image class = "img-responsive" src='${flowers[i].picture}'
-                                        id="${i}">
+                                    <figure onclick='swap("${i}")'>
+                                        <image class = "img-responsive" src='${flowers[i].picture}'>
                                             <figcaption>${flowers[i].name}</figcaption>
                                     </figure>
                                 </td>`;
           } else {
             botRow.innerHTML += `<td>
-                                    <figure>
-                                        <image class = "img-responsive" src='${flowers[i].picture}'
-                                        id="${i}">
+                                    <figure onclick='swap("${i}")'>
+                                        <image class = "img-responsive" src='${flowers[i].picture}'>
                                             <figcaption>${flowers[i].name}</figcaption>
                                     </figure>
                                 </td>`;
@@ -130,7 +128,7 @@
         "https://habahram.blob.core.windows.net/flowers/waterlily.jpg"
       );
 
-      var flowers = [
+      let flowers = [
         daffodil,
         cherryblossom,
         lily,
@@ -145,18 +143,56 @@
       displayFlowers(flowers);
 
       var swap = function(i) {
-          console.log(i)
+        let newFirst = flowers[i]
+        let temp = flowers[0]
+        flowers[0] = newFirst
+        flowers[i] = temp
+        
+        let row;
+        let cell;
+        if (i > 3) {
+            row = 1
+            if (i == 4) {
+                cell = 0
+            } else if (i == 5) {
+                cell = 1
+            } else if (i == 6) {
+                cell = 2
+            } else {
+                cell = 3
+            }
+        } else {
+            row = 0
+            cell = i
+        }
+
+        var table = document.getElementById("table");
+        // swap clicked and first
+        table.rows[0].cells[0].innerHTML = newFirst.pictureName
+        table.rows[row].cells[cell].innerHTML = temp.pictureName
+
+        let next = findNext(newFirst)
+        temp = flowers[1]
+        flowers[1] = next
+        table.rows[0].cells[1].innerHTML = next.pictureName
+        // find new spot for temp?
       }
-      // was testing out stuff trying to figure out how to make images clickable and
-      // execute a swap but gave up..
-      document.getElementById("0").addEventListener("click", swap('0'));
-      document.getElementById("1").addEventListener("click", swap('1'));
-      document.getElementById("2").addEventListener("click", swap('2'));
-      document.getElementById("3").addEventListener("click", swap('3'));
-      document.getElementById("4").addEventListener("click", swap('4'));
-      document.getElementById("5").addEventListener("click", swap('5'));
-      document.getElementById("6").addEventListener("click", swap('6'));
-      document.getElementById("7").addEventListener("click", swap('7'));
+
+      var findNext = function(newFirst) {
+          let sorted = []
+          for (var f of flowers) {
+            sorted.push(f.name)
+          }
+
+          //sort new array
+          sorted.sort()
+          for (var i = 0; i < sorted; i++) {
+            if (sorted[i] == newFirst.name) {
+                return sorted[i + 1]
+            }
+          }
+      }
+      
       
 
     </script>
