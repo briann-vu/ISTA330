@@ -1,64 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-
-<body>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
     <div id="question">
-        1. Display the flowers as per question 1.<br />
-        2. Add the following functionality to the page:<br />
-        When users click on an image, the images should be
-        reorganized using the following rule:<br />
-        The flower that has been clicked goes to the first position in
-        the first row. The next position in the first row will
-        be the flower whose name is alphabeticlly right after the
-        name of the first one and so on for the other flowers.
-        <br />
-        So, for example if a user clicks on the flower lily,
-        then the flowers should be rearranged as:
-        <br />
-        <table>
-            <tr>
-                <td>
-                    lily
-                </td>
-                <td>
-                    rose
-                </td>
-                <td>
-                    sunflower
-                </td>
-                <td>
-                    tulip
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    water lily
-                </td>
-                <td>
-                    cherry blossom
-                </td>
-                <td>
-                    daffodil
-                </td>
-                <td>
-                    daisy
-                </td>
-            </tr>
-        </table>
-
+      1. Display the flowers as per question 1.<br />
+      2. Add the following functionality to the page:<br />
+      When users click on an image, the images should be reorganized using the
+      following rule:<br />
+      The flower that has been clicked goes to the first position in the first
+      row. The next position in the first row will be the flower whose name is
+      alphabeticlly right after the name of the first one and so on for the
+      other flowers.
+      <br />
+      So, for example if a user clicks on the flower lily, then the flowers
+      should be rearranged as:
+      <br />
+      <table>
+        <tr>
+          <td>lily</td>
+          <td>rose</td>
+          <td>sunflower</td>
+          <td>tulip</td>
+        </tr>
+        <tr>
+          <td>water lily</td>
+          <td>cherry blossom</td>
+          <td>daffodil</td>
+          <td>daisy</td>
+        </tr>
+      </table>
     </div>
-    <div id='flowersDiv'>
-
+    <div id="flowersDiv" class="container">
+      <table class="table"></table>
     </div>
     <script>
-        /*
+
+        
+
+
+      var displayFlowers = function (flowers) {
+        var flowersDiv = document.getElementById("flowersDiv");
+        var table = flowersDiv.firstElementChild;
+        var topRow = table.insertRow(0);
+        var botRow = table.insertRow(1);
+        for (var i = 0; i < flowers.length; i++) {
+          if (i < flowers.length / 2) {
+            topRow.innerHTML += `<td>
+                                    <figure>
+                                        <image class = "img-responsive" src='${flowers[i].picture}'
+                                        id="${i}">
+                                            <figcaption>${flowers[i].name}</figcaption>
+                                    </figure>
+                                </td>`;
+          } else {
+            botRow.innerHTML += `<td>
+                                    <figure>
+                                        <image class = "img-responsive" src='${flowers[i].picture}'
+                                        id="${i}">
+                                            <figcaption>${flowers[i].name}</figcaption>
+                                    </figure>
+                                </td>`;
+          }
+        }
+      };
+      
+
+      /*
            1. Display the flowers as per question 1.
            2. Add the following functionality to the page:
               When users click on an image, the images should be 
@@ -75,32 +91,74 @@
         waterlily   cherryblossom  daffodil    daisy 
         
         */
-        class Flower {
-            constructor(name, pictureName) {
-                this.name = name;
-                this.picture = pictureName;
-            }
+      class Flower {
+        constructor(name, pictureName) {
+          this.name = name;
+          this.picture = pictureName;
         }
-        let daffodil = new Flower('Daffodil', 'https://habahram.blob.core.windows.net/flowers/daffodil.jpg');
-        let cherryblossom = new Flower('Cherry blossom', 'https://habahram.blob.core.windows.net/flowers/cherryblossom.jpg');
-        let lily = new Flower('Lily', 'https://habahram.blob.core.windows.net/flowers/lily.jpg');
-        let daisy = new Flower('Daisy', 'https://habahram.blob.core.windows.net/flowers/daisy.jpg');
-        let sunflower = new Flower('Sunflower', 'https://habahram.blob.core.windows.net/flowers/sunflower.jpg');
-        let tulip = new Flower('Tulip', 'https://habahram.blob.core.windows.net/flowers/tulip.jpg');
-        let rose = new Flower('Rose', 'https://habahram.blob.core.windows.net/flowers/rose.jpg');
-        let waterlily = new Flower('Water lily', 'https://habahram.blob.core.windows.net/flowers/waterlily.jpg');
+      }
+      let daffodil = new Flower(
+        "Daffodil",
+        "https://habahram.blob.core.windows.net/flowers/daffodil.jpg"
+      );
+      let cherryblossom = new Flower(
+        "Cherry blossom",
+        "https://habahram.blob.core.windows.net/flowers/cherryblossom.jpg"
+      );
+      let lily = new Flower(
+        "Lily",
+        "https://habahram.blob.core.windows.net/flowers/lily.jpg"
+      );
+      let daisy = new Flower(
+        "Daisy",
+        "https://habahram.blob.core.windows.net/flowers/daisy.jpg"
+      );
+      let sunflower = new Flower(
+        "Sunflower",
+        "https://habahram.blob.core.windows.net/flowers/sunflower.jpg"
+      );
+      let tulip = new Flower(
+        "Tulip",
+        "https://habahram.blob.core.windows.net/flowers/tulip.jpg"
+      );
+      let rose = new Flower(
+        "Rose",
+        "https://habahram.blob.core.windows.net/flowers/rose.jpg"
+      );
+      let waterlily = new Flower(
+        "Water lily",
+        "https://habahram.blob.core.windows.net/flowers/waterlily.jpg"
+      );
 
-        let flowers = [
-            daffodil,
-            cherryblossom,
-            lily,
-            daisy,
-            sunflower,
-            tulip,
-            rose,
-            waterlily
-        ];
+      var flowers = [
+        daffodil,
+        cherryblossom,
+        lily,
+        daisy,
+        sunflower,
+        tulip,
+        rose,
+        waterlily,
+      ];
+
+
+      displayFlowers(flowers);
+
+      var swap = function(i) {
+          console.log(i)
+      }
+      // was testing out stuff trying to figure out how to make images clickable and
+      // execute a swap but gave up..
+      document.getElementById("0").addEventListener("click", swap('0'));
+      document.getElementById("1").addEventListener("click", swap('1'));
+      document.getElementById("2").addEventListener("click", swap('2'));
+      document.getElementById("3").addEventListener("click", swap('3'));
+      document.getElementById("4").addEventListener("click", swap('4'));
+      document.getElementById("5").addEventListener("click", swap('5'));
+      document.getElementById("6").addEventListener("click", swap('6'));
+      document.getElementById("7").addEventListener("click", swap('7'));
+      
+
     </script>
-</body>
-
+  </body>
 </html>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="question">
@@ -12,21 +18,20 @@
       containing 4 flowers. For each flower, you should show the image and under
       the image display its name.
     </div>
-    <div id="flowersDiv">
-      <table></table>
+    <div id="flowersDiv" class="container">
+      <table class="table"></table>
     </div>
     <script>
       var displayFlowers = function (flowers) {
         var flowersDiv = document.getElementById("flowersDiv");
         var table = flowersDiv.firstElementChild;
-        console.log("yeet i");
         var topRow = table.insertRow(0);
         var botRow = table.insertRow(1);
         for (var i = 0; i < flowers.length; i++) {
           if (i < flowers.length / 2) {
-            topRow.innerHTML += `<image src='${flowers[i].picture}'>`;
+            topRow.innerHTML += `<td><figure><image class = "img-responsive" src='${flowers[i].picture}'><figcaption>${flowers[i].name}</figcaption></figure></td>`;
           } else {
-            botRow.innerHTML += `<image src='${flowers[i].picture}'>`;
+            botRow.innerHTML += `<td><figure><image class = "img-responsive" src='${flowers[i].picture}'><figcaption>${flowers[i].name}</figcaption></figure></td>`;
           }
         }
       };
@@ -44,14 +49,38 @@
           this.picture = pictureName;
         }
       }
-      let daffodil = new Flower("Daffodil", "daffodil.png");
-      let cherryblossom = new Flower("Cherry blossom", "cherryblossom.png");
-      let lily = new Flower("Lily", "lily.jpg");
-      let daisy = new Flower("Daisy", "daisy.jpg");
-      let sunflower = new Flower("Sunflower", "sunflower.png");
-      let tulip = new Flower("Tulip", "tulip.png");
-      let rose = new Flower("Rose", "rose.png");
-      let waterlily = new Flower("Water lily", "waterlily.png");
+      let daffodil = new Flower(
+        "Daffodil",
+        "https://habahram.blob.core.windows.net/flowers/daffodil.jpg"
+      );
+      let cherryblossom = new Flower(
+        "Cherry blossom",
+        "https://habahram.blob.core.windows.net/flowers/cherryblossom.jpg"
+      );
+      let lily = new Flower(
+        "Lily",
+        "https://habahram.blob.core.windows.net/flowers/lily.jpg"
+      );
+      let daisy = new Flower(
+        "Daisy",
+        "https://habahram.blob.core.windows.net/flowers/daisy.jpg"
+      );
+      let sunflower = new Flower(
+        "Sunflower",
+        "https://habahram.blob.core.windows.net/flowers/sunflower.jpg"
+      );
+      let tulip = new Flower(
+        "Tulip",
+        "https://habahram.blob.core.windows.net/flowers/tulip.jpg"
+      );
+      let rose = new Flower(
+        "Rose",
+        "https://habahram.blob.core.windows.net/flowers/rose.jpg"
+      );
+      let waterlily = new Flower(
+        "Water lily",
+        "https://habahram.blob.core.windows.net/flowers/waterlily.jpg"
+      );
 
       let flowers = [
         daffodil,
